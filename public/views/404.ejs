@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <% if(isLogin){%>
+        <%- include("header") %>
+    <%}else{%>
+        <%- include("headerNotLogin") %>
+    <%} %>
+    <main>
+        <p class="bigSize">404</p>
+        <p class="bigSize">Not Found</p>
+    </main>
+</body>
+
+</html>

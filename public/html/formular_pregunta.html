@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="formular_pregunta.css" media="screen"/>
+    </head>
+    <body>
+        <header>
+                <div class="cabecera_izq">
+                    <button type="submit" class="button">Preguntas</button>
+                    <button type="submit" class="button">Sin responder</button>
+                    <button type="submit" class="button">Usuarios</button>
+                </div>
+                <img src="img/404-4.png" id="img404" alt="" class="cabecera">
+                <div class="cabecera">
+                    <img src="img/avatar4.png" alt="avatar4" id="avatar4">
+
+                    <button type="submit" class="button">Cerrar sesión</button>
+                </div>
+            
+        </header>
+        <main>
+            <div id="form_busqueda">
+                <form action="" method="get" >
+                    <input type="submit" value="Busqueda" class="button"> 
+                    <input type="search" name="busqueda" placeholder="Buscar por titulo/cuerpo de pregunta" id="busqueda">
+                </form>
+                </div>
+            <h1>Formular pregunta</h1>
+            <div class="form_div">
+                <form action="" method="get">
+                    <label for="Titulo" class= "formulario" >Titulo</label>
+                    <label for="Titulo_explicacion" class="formulario_explicacion">Se especifico e imagina que estas haciendo la pregunta a otra persona</label>
+                    <input type="text" name="Titulo" class= "formInput" placeholder="Por ejemplo: @node@css">
+                    <label for="Cuerpo" class= "formulario" >Cuerpo</label>
+                    <label for="Cuerpo_explicacion" class="formulario_explicacion">Incluye toda la informacion que alguien neceitaria
+                        para responder a tu pregunta</label>
+                    <input type="text" name="Cuerpo"  id="cuerpo">  
+                    <label for="Etiquetas" class= "formulario" >Etiquetas</label>
+                    <label for="Etiquetas_explicacion" class="formulario_explicacion">Añade hasta 5 etiquetas para describir sobre que 
+                        trata tu pregunta</label>
+                    <input type="text" name="Etiquetas" placeholder="Por ejemplo: @node@css" class= "formInput" > 
+                    <br>
+                    <input type="submit" value="Crear cuenta" class="button"> 
+                </form>
+            </div>
+            <button type="submit" class="button">Publica tu pregunta</button>
+        </main>
+    </body>
+</html>

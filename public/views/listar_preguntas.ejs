@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/common.css" media="screen"/>
+        <link rel="stylesheet" href="/css/listar_preguntas.css" media="screen"/>
+    </head>
+    <body>
+        <header>
+            <div class="cabecera">
+                <a class="button" href="/question/listar_preguntas">Preguntas</a>
+                <a class="button" href="/question/preguntasSinResponder">Sin responder</a>
+                <a class="button" href="/question/preguntas">Usuarios</a>
+            </div>
+            
+            <img src="/img/404-4.png" id="img404" alt="">
+            <div class="cabecera">
+                               
+                <a class="button" href="/user/logout">Cerrar sesión</a>
+                
+            </div>
+        
+    </header>
+        <main>
+            <form action="" method="get">
+                <input type="submit" value="Busqueda" class="button"> 
+                <input type="search" name="busqueda" placeholder="Buscar por titulo/cuerpo de pregunta" id="busqueda">
+            </form>
+            
+            <h1>Todas las preguntas</h1>
+            <div class="primeraLinea">
+                <h2><%= questions.length %> preguntas</h2>
+                <a class="button" href="/question/formular_pregunta">Formular pregunta</a>
+            </div>
+            <ul>
+                <% questions.forEach(function(question) { %>
+                <li>
+                    <div class="izq"> 
+                        <h3><%= question.titulo %></h3>
+                        <p><%= question.cuerpo %></p>
+                        <div class="etiquetas">
+                            <p class= "etiqueta">css</p>
+                            <p class= "etiqueta">css3</p>
+                        </div>
+                    </div>
+                    <div class="drcha">
+                        <p>Formulada el dia <%= question.fecha %></p>
+                        <img src=/img/<%= question.imagen %> alt=""  class="foto_pequeña">
+                        <h3><%= question.nombre %></h3>
+                    </div>
+                </li>
+                <% }); %>
+            </ul>
+        </main>
+    </body>
+</html>
